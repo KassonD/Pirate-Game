@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -35,6 +36,8 @@ public class playerController : MonoBehaviour
     private MovementStates prevMovementState;
     private bool isAttacking = false;
     private float currentHealth;
+
+    private const float CAMERA_OFFSET = -10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -140,6 +143,12 @@ public class playerController : MonoBehaviour
         }
         else
             PlayAudio(deathAudio);
+    }
+
+    public void Transport(Vector2 location)
+    {
+        transform.position = location;
+        mainCamera.position = new Vector3(location.x, location.y, CAMERA_OFFSET);
     }
 
     private void PlayAudio(AudioClip clip, bool loop = false)
