@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 991541292377178375}
   - component: {fileID: 6496800514134802422}
   m_Layer: 0
-  m_Name: Transporter
+  m_Name: Transport Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

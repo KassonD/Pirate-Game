@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class transporterController : MonoBehaviour
+public class transportArea : MonoBehaviour
 {
     // Variables
     public Transform linkedTransporter;
